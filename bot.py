@@ -118,7 +118,8 @@ async def process_start_command(message: types.Message):
 
 
 if __name__ == '__main__':
-    try:
-        executor.start_polling(dp, skip_updates=False, on_startup=on_startup)
-    except:
-        time.sleep(15)
+    while True:
+        try:
+            executor.start_polling(dp, skip_updates=False, on_startup=on_startup)
+        except:
+            time.sleep(15)
